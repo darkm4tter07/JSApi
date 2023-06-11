@@ -1,0 +1,5 @@
+There are 4 methods of API call in javascript:
+1.XMLHttpRequest
+2.Fetch
+3.Axios
+4.JQuery

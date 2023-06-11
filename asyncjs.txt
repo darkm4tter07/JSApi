@@ -1,0 +1,39 @@
+#Async Javascript(Start something now and finish it later)
+
+-Governs how we perform tasks which take some time to complete(e.g. getting data from database)
+
+JS can run ONE statement at a time
+
+This is example of synchronous code:
+Stmt 1 -> 
+stmt 2 -> 
+stmt 3(takes time and it blocks stmt 4 from running until it completes) -> 
+stmt 4
+
+Asynchronous Code
+stmt 1 -> 
+stmt 2 -> 
+stmt 3(takes time, it is taken by callback function which takes it outside of scope from thread) -> 
+stmt 4 ->
+[Callback function where, stmt 3 is passed as parameter] This will call again stmt 3 after when it gets executed(eg. getting data from database)
+
+
+#HTTP Requests
+
+-Make HTTP requests to get data from another server
+-We make these requests to API endpoints
+
+We'll play here with JSON format API, where JSON stands for JavaScript Object Notation
+
+eg.This is a JSON response data from request URL:
+'https://jsonplaceholder.typicode.com/todos/1'
+{
+  "userId": 1,
+  "id": 1,
+  "title": "delectus aut autem",
+  "completed": false
+}
+This data is got by a request URL with certain request method(eg. GET,POST,PUT, PATCH, DELETE);
+GET vs POST
+-GET is used to request data from a specified resource.
+-POST is used to send data to a server to create/update a resource.
